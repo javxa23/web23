@@ -1,0 +1,273 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>247</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Delicious+Handrawn&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            background: #f7f5eb;
+        }
+
+        #heartContainer {
+            position: absolute;
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #f7f5eb;
+            z-index: 2;
+        }
+
+        #heartBtn {
+            height: 70px;
+            width: 70px;
+            background: #f20044;
+            position: relative;
+            transform: rotate(-45deg);
+            cursor: pointer;
+            box-shadow: -10px 10px 90px #f20044;
+            animation: heart 0.6s linear infinite;
+        }
+
+        @keyframes heart {
+            0% {
+                transform: rotate(-45deg) scale(1.07);
+            }
+
+            80% {
+                transform: rotate(-45deg) scale(1.0);
+            }
+
+            100% {
+                transform: rotate(-45deg) scale(0.8);
+            }
+        }
+
+        #heartBtn:before {
+            content: '';
+            position: absolute;
+            height: 70px;
+            width: 70px;
+            background: #f20044;
+            top: -50%;
+            border-radius: 50px;
+            box-shadow: -10px -10px 90px #f20044;
+        }
+
+        #heartBtn:after {
+            content: '';
+            position: absolute;
+            height: 70px;
+            width: 70px;
+            background: #f20044;
+            right: -50%;
+            border-radius: 50px;
+            box-shadow: 10px 10px 90px #f20044;
+        }
+
+        #heartBtn2 {
+            height: 70px;
+            width: 70px;
+            background: #f20044;
+            position: relative;
+            transform: rotate(-45deg);
+            cursor: pointer;
+            box-shadow: -10px 10px 90px #f20044;
+            animation: heart2 3s linear infinite;
+        }
+
+        @keyframes heart2 {
+            0% {
+                transform: rotate(-45deg) scale(1.0);
+                opacity: 1.0;
+            }
+
+            10% {
+                transform: rotate(-45deg) scale(1.5);
+                opacity: 1.0;
+            }
+
+            20% {
+                transform: rotate(-45deg) scale(1.25);
+                opacity: 0.8;
+            }
+
+            30% {
+                transform: rotate(-45deg) scale(2.5);
+                opacity: 1.0;
+            }
+
+            40% {
+                transform: rotate(-45deg) scale(2.00);
+                opacity: 0.8;
+            }
+
+            50% {
+                transform: rotate(-45deg) scale(4.0);
+                opacity: 1.0;
+            }
+
+            60% {
+                transform: rotate(-45deg) scale(3.5);
+                opacity: 0.8;
+            }
+
+            70% {
+                transform: rotate(-45deg) scale(6.0);
+                opacity: 1.0;
+            }
+
+            80% {
+                transform: rotate(-45deg) scale(4.5);
+                opacity: 0.5;
+            }
+
+            100% {
+                transform: rotate(-45deg) scale(30.0);
+                opacity: 0;
+            }
+        }
+
+        #heartBtn2:before {
+            content: '';
+            position: absolute;
+            height: 70px;
+            width: 70px;
+            background: #f20044;
+            top: -50%;
+            border-radius: 50px;
+            box-shadow: -10px -10px 90px #f20044;
+        }
+
+        #heartBtn2:after {
+            content: '';
+            position: absolute;
+            height: 70px;
+            width: 70px;
+            background: #f20044;
+            right: -50%;
+            border-radius: 50px;
+            box-shadow: 10px 10px 90px #f20044;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            width: auto;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+        }
+
+        #home {
+            z-index: 1;
+            position: relative;
+            margin: 0;
+            padding: 0;
+            max-width: 500px;
+            min-width: 500px;
+            display: grid;
+        }
+
+        #imgContainer {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+
+        #gifImage {
+            width: 50%;
+            margin-bottom: -100px;
+        }
+
+        #btns {
+            position: relative;
+        }
+
+        #btn1,
+        #btn2 {
+            position: absolute;
+            top: 40%;
+            height: 50px;
+            width: 100px;
+            border-radius: 25px;
+            box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+            border: none;
+            font-weight: 1000;
+            font-family: "Delicious Handrawn", cursive;
+            font-size: large;
+        }
+        #btn1 {
+            background-color: lightgreen;
+            left: 100px;
+        }
+
+        #btn2 {
+            background-color: lightcoral;
+            left: 300px;
+        }
+
+        p {
+            width: max-content;
+            margin-top: -80px;
+            font-family: "Delicious Handrawn", cursive;
+            font-size: 40px;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="heartContainer">
+        <div id="heartBtn" onclick="openEffect()"></div>
+    </div>
+    <div id="home">
+        <div id="imgContainer">
+            <p id="maintext">Do you love me?</p>
+            <img src="images/do-you-love-me.gif" alt="" id="gifImage">
+        </div>
+        <div id="btns">
+            <button id="btn1" onclick="yesbtn()" >YES</button>
+            <button id="btn2" onclick="nobtn()">NO</button>
+        </div>
+    </div>
+    <script>
+        const heartBtn = document.getElementById("heartBtn");
+        const heartContainer = document.getElementById("heartContainer");
+        const btn1 = document.getElementById("btn1");
+        const btn2 = document.getElementById("btn2");
+        const maintext = document.getElementById("maintext");
+        const gifImage = document.getElementById("gifImage");
+        function openEffect() {
+            heartBtn.id = "heartBtn2";
+            setTimeout(function () {
+                heartContainer.id = "";
+                heartBtn.id = "";
+            }, 3000)
+        }
+        function nobtn(){
+            const x = Math.floor(Math.random()*300)+1;
+            const y = Math.floor(Math.random()*60)+1;
+            btn2.style.left = x + "px";
+            btn2.style.top = y + "%";
+        }
+        function yesbtn(){
+            maintext.innerHTML="Awww I love you more <br> my PRINCESSLEN";
+            gifImage.src="images/love-you-more.gif";
+        }
+
+    </script>
+</body>
+
+</html>
